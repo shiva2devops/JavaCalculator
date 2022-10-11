@@ -6,6 +6,8 @@ pipeline {
             steps {
                 echo 'Code validating..'
                 sh 'mvn compile'
+                sh 'mvn clean package'
+                sh 'mvn package'
             }
         }
         stage('Docker-Build') {
