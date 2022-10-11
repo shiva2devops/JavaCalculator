@@ -1,8 +1,8 @@
  #Select Base Image
 FROM tomcat
-WORKDIR /JavaCalculator
+WORKDIR /Dockerfile
 #Update code /usr/local/apache2/htdocs
-COPY *.jar ~/tomcat/webapps/
+COPY ~/target/*.jar ~/tomcat/webapps
 
 EXPOSE 9999
 
